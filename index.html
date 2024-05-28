@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Lotto Draw</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="outer-container">
+        <div class="container">
+            <main>
+                <div class="main-header">
+                    <p>Lotto & Bitcoin</p>
+                    <div class="banner">New</div>
+                </div>
+                <div class="page-content" style="display: flex">
+                <div class="div1">
+                    <div class="div1-header">The Irish Lotto</div>
+                    <div class="div1-content"><p>Since 16th April 1988, the Irish Lotto draw takes place every Saturday at 8pm. On 30th May 1990 an additional Wednesday evening draw was introduced.</p>
+                        <p>What would EUR 100 in winnings invested on a draw date in the last year be worth in Euro now?</p>
+                        <p>Enter a date and time in the form to get the next draw date and time, with the current value of your investment.</p></div>
+                </div>
+                <div class="div2">
+                    <div class="div2-header"><label for="dateInput">Enter a date and time:</label></div>
+                    <div class="div2-content">
+                        <form id="lottoForm">
+                            
+                            <input type="datetime-local" id="dateInput" name="dateInput" required>
+                            <button type="submit">Submit</button>
+                        </form>
+                        <table id="resultsTable">
+                            <thead>
+                                <tr>
+                                    <th>Next Draw Date</th>
+                                    <th>Bitcoin Value (EUR 100)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <td colspan="3" *ngIf="noRecords" class="no-records">No Records.</td>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+                </div>
+            </main>
+            <footer>
+                <p>&copy; 2024 My Company</p>
+            </footer>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
