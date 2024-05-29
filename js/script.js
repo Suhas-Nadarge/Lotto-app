@@ -111,18 +111,6 @@ function getNextLottoDraw(inputDate = new Date()) {
     return nextDraws.sort((a, b) => a - b)[0];
 }
 
-// async function getBitcoinPriceOnDate(date) {
-//     const formattedDate = formatDateForAPI(date);
-//     const response = await fetch(`https://api.coingecko.com/api/v3/coins/bitcoin/history?date=${formattedDate}`);
-//     const data = await response.json();
-//     return data.market_data.current_price.eur;
-// }
-
-// async function getCurrentBitcoinPrice() {
-//     const response = await fetch('https://api.coingecko.com/api/v3/coins/bitcoin');
-//     const data = await response.json();
-//     return data.market_data.current_price.eur;
-// }
 
 async function getBitcoinPriceOnDate(date) {
     const formattedDate = formatDateForAPI(date);
